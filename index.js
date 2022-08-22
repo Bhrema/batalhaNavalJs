@@ -10,7 +10,7 @@ function imprimeMar(dimensao) {
 
     for (let i = 0; i < dimensao; i++) {
         for (let j = 0; j < dimensao; j++) {
-            htmlString += `<div>${i}</div>`;
+            htmlString += `<div id = "teste">${i}</div>`;
         }
         htmlString += `<br>`;
 
@@ -18,9 +18,11 @@ function imprimeMar(dimensao) {
     main.innerHTML = htmlString;
 }
 
-document.querySelector('div').onclick = function() {clicar()};
+//pensar num seletor, pois ID precisa ser único
 
-function clicar(){
-    document.querySelector('id').innerHTML = "YOU CLICKED ME!";
-};
+document.getElementById('teste').onclick = function() {myFunction()};
+
+function myFunction() {
+  document.getElementById('teste').innerHTML = "YOU CLICKED ME!";
+}
 
